@@ -1,0 +1,29 @@
+{/* <form onSubmit={handleSubmit(onSubmit)}>
+        <FormControl>
+          <FormLabel>Email address</FormLabel>
+          <Input
+            type="email"
+            id="email"
+            placeholder="Please input your email address"
+            {...register("email", {
+              required: "Please input a valid email address",
+              pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            })}
+          />
+          <FormErrorMessage>
+            {errors.email && errors.email.message}
+          </FormErrorMessage>
+          <FormLabel>Password</FormLabel>
+          <Input
+            type="password"
+            id="password"
+            placeholder="Please input your password"
+            {...register("password", {
+              required: "Please input a valid password",
+            })}
+          />
+          <FormErrorMessage>
+            {errors.password && errors.password.message}
+          </FormErrorMessage>
+        </FormControl>
+      </form> */}
