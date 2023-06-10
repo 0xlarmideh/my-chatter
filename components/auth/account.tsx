@@ -5,6 +5,7 @@ import {
   Session,
   createClientComponentClient,
 } from "@supabase/auth-helpers-nextjs";
+import Avatar from "./avataar";
 
 
 export default function AccountForm({ session }: { session: Session | null }) {
@@ -18,7 +19,6 @@ export default function AccountForm({ session }: { session: Session | null }) {
 
   const getProfile = useCallback(async () => {
     try {
-  console.log(session);
 
       setLoading(true);
 
@@ -81,6 +81,16 @@ export default function AccountForm({ session }: { session: Session | null }) {
 
   return (
     <div className="form-widget">
+      <Avatar
+      
+        uid={user.id}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url);
+          updateProfile({ fullname, username, website, avatar_url: url });
+        }}
+      />
       <div>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={session?.user.email} disabled />
@@ -126,10 +136,13 @@ export default function AccountForm({ session }: { session: Session | null }) {
       </div>
 
       <div>
-          <button className="button block" type="submit" onClick={() => supabase.auth.signOut()} >
-            Sign out
-          </button>
-
+        <button
+          className="button block"
+          type="submit"
+          onClick={() => supabase.auth.signOut()}
+        >
+          Sign out
+        </button>
       </div>
     </div>
   );

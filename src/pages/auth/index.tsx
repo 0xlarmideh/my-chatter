@@ -1,15 +1,13 @@
 import {
   Container,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
 } from "@chakra-ui/react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AuthForm from "../../../components/auth/auth-form";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import AccountForm from "../../../components/auth/account";
+import { ReactElement } from "react";
+import { landingLayout } from "@/types/type";
+import Layout from "../../../components/layout/default";
 
 
 type Inputs = {
@@ -18,18 +16,11 @@ type Inputs = {
 };
 
 
-const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+const Login:landingLayout = () => {
 
   const session = useSession();
   const supabase = useSupabaseClient();
-  console.log(session?.user)
+  console.log(session)
 
   return (
     <>
@@ -42,6 +33,10 @@ const Login = () => {
       )}
     </>
   );
+};
+
+Login.getLayout = function (page: ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Login;

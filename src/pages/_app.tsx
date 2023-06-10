@@ -1,13 +1,13 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
-import { ReactElement, ReactNode } from 'react';
-import { NextPage } from 'next';
-import Layout from '../../components/layout/layout';
+"use-client";
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
+import { ReactElement, ReactNode } from "react";
+import { NextPage } from "next";
+import Layout from "../../components/layout/applayout";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { useState } from "react";
-
 
 type NextPageWithLayout = NextPage & {
   getLayout: (page: ReactElement) => ReactNode;
