@@ -34,13 +34,13 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       </SessionContextProvider>
     ));
 
-  return getLayout(
+  return (
     <SessionContextProvider
       supabaseClient={supabaseClient}
       initialSession={pageProps.initialSession}
     >
       <ChakraProvider>
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </ChakraProvider>
     </SessionContextProvider>
   );

@@ -32,7 +32,7 @@ const Navbar = (): React.JSX.Element => {
           </Flex>
           <Spacer />
           {!session ? (
-            <Flex gap="4">
+            <Flex gap="8">
               <Link href="/auth">
                 <Button
                   borderColor="blue.700"
