@@ -8,9 +8,11 @@ import {
   FormHelperText,
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
+import { useRouter } from 'next/router';
 
 const Topbar = () => {
   const [input, setInput] = useState("");
+  const router = useRouter();
 
   return (
     <Box
@@ -19,11 +21,13 @@ const Topbar = () => {
       borderBottom="0.5px solid #ececec"
       mb="40px"
       position="fixed"
-      zIndex="1000"
+      zIndex="1001"
       bg="white"
     >
       <Flex w="full" alignItems="center">
-        <Link href="/home">
+        <Link
+          href="/home"
+        >
           <Text fontSize="36" color="#543EE0" fontWeight="medium" variant="h3">
             Chatter
           </Text>

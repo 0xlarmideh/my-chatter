@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Icon } from '@iconify/react';
 import { ReactNode } from "react";
 import PostImage from "/public/assets/postimage.jpg"
+import Link from 'next/link';
 
 const PostDetail = ():ReactNode => {
   const postData = [
@@ -78,52 +79,58 @@ const PostDetail = ():ReactNode => {
     <>
       {postData.map(({id, title, description, datePosted, author, role, postLength }) => {
         return (
-          <Grid
-            bg="#F5F7F9"
-            padding="12px"
-            templateColumns="1fr 1.2fr"
-            borderRadius="12px"
-            gap={4}
-            key={id}
-          >
-            <Box borderRadius="30px">
-              <Image
-                loading="lazy"
-                src={PostImage}
-                alt="Image of thhe post"
-              ></Image>
-            </Box>
-            <Box display="flex" flexDirection="column" gap={4}>
-              <Flex justifyContent="space-between">
-                <Flex gap={2}>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    h="30px"
-                    w="30px"
-                    fontSize="24px"
-                    borderRadius="100%"
-                    p="0px"
-                    bg="cyan.100"
-                  >
-                    <Text>{author[0]} </Text>
-                  </Box>
-                  <Box>
-                    <Text fontSize="14px">{author} </Text>
-                    <Text fontSize="11px">{role} </Text>
-                  </Box>
+          <Link href="">
+            <Grid
+              bg="#F5F7F9"
+              padding="12px"
+              templateColumns="1fr 1.2fr"
+              borderRadius="12px"
+              gap={4}
+              border={ "2px solid transparent" }
+              _hover={{ border: "2px solid cyan", transition: "1s" }}
+              key={id}
+            >
+              <Box borderRadius="30px">
+                <Image
+                  loading="lazy"
+                  src={PostImage}
+                  alt="Image of thhe post"
+                ></Image>
+              </Box>
+              <Box display="flex" flexDirection="column" gap={4}>
+                <Flex justifyContent="space-between">
+                  <Flex gap={2}>
+                    <Box
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      h="30px"
+                      w="30px"
+                      fontSize="24px"
+                      borderRadius="100%"
+                      p="0px"
+                      bg="cyan.100"
+                    >
+                      <Text>{author[0]} </Text>
+                    </Box>
+                    <Box>
+                      <Text fontSize="14px">{author} </Text>
+                      <Text fontSize="11px">{role} </Text>
+                    </Box>
+                  </Flex>
+                  <Icon icon="solar:bookmark-outline" width="28" />
                 </Flex>
-                <Icon icon="solar:bookmark-outline" width="28" />
-              </Flex>
-              <Text fontWeight="500" fontSize="27px" variant="h3">{title} </Text>
-              <Flex fontSize="11px" gap={12}>
-                <Text>{postLength} </Text>
-                <Text>{datePosted} </Text>
-              </Flex>
-              <Text fontSize="16px">{description} </Text>
-            </Box>
-          </Grid>
+                <Text fontWeight="500" fontSize="27px" variant="h3">
+                  {title}{" "}
+                </Text>
+                <Flex fontSize="11px" gap={12}>
+                  <Text>{postLength} </Text>
+                  <Text>{datePosted} </Text>
+                </Flex>
+                <Text fontSize="16px">{description} </Text>
+              </Box>
+            </Grid>
+          </Link>
         );
       })}
     </>

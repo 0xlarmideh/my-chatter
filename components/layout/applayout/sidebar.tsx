@@ -17,6 +17,7 @@ const Sidebar = () => {
       position="fixed"
       bg="#F5F7F9"
       gap="30px"
+      zIndex={1000}
     >
       <Link
         href="/home"
@@ -52,7 +53,11 @@ const Sidebar = () => {
         href="/analytics"
         className={router.pathname == "/analytics" ? "active-icon" : "nav-link"}
       >
-        <Icon icon="carbon:analytics-custom" width="28" />
+        <Icon
+          className="sidebar-icon"
+          icon="carbon:analytics-custom"
+          width="28"
+        />
       </Link>
       <style jsx global>
         {`
@@ -63,9 +68,14 @@ const Sidebar = () => {
           .active-icon {
             padding: 10px;
             border-radius: 8px;
-            background-color: #543EE0;
+            background-color: #543ee0;
             color: white;
-;
+          }
+          .side-bar:hover {
+            cursor: pointer;
+            background-color: lavender;
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
           }
           .nav-link:hover {
             cursor: pointer;
