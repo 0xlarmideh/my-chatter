@@ -8,7 +8,7 @@ const Sidebar = () => {
   const router = useRouter();
   return (
     <Box
-      w="100px"
+      w="80px"
       display="flex"
       flexDirection={"column"}
       alignItems="center"
@@ -16,13 +16,13 @@ const Sidebar = () => {
       h="100%"
       position="fixed"
       bg="#F5F7F9"
-      gap="50px"
+      gap="30px"
     >
       <Link
         href="/home"
         className={router.pathname == "/home" ? "active-icon" : "nav-link"}
       >
-        <Icon icon="iconamoon:home-light" width="33" />
+        <Icon icon="iconamoon:home-light" width="28" />
       </Link>
       <Link
         href="/posts/bookmarks"
@@ -30,7 +30,7 @@ const Sidebar = () => {
           router.pathname == "/posts/bookmarks" ? "active-icon" : "nav-link"
         }
       >
-        <Icon icon="solar:bookmark-outline" width="33" />
+        <Icon icon="solar:bookmark-outline" width="28" />
       </Link>
       <Link
         href="/posts/drafts"
@@ -38,7 +38,7 @@ const Sidebar = () => {
           router.pathname == "/posts/drafts" ? "active-icon" : "nav-link"
         }
       >
-        <Icon icon="ri:draft-line" width="33" />
+        <Icon icon="ri:draft-line" width="28" />
       </Link>
       <Link
         href="/posts/trending"
@@ -46,13 +46,13 @@ const Sidebar = () => {
           router.pathname == "/posts/trending" ? "active-icon" : "nav-link"
         }
       >
-        <Icon icon="icon-park-outline:trending-up" width="33" />
+        <Icon icon="icon-park-outline:trending-up" width="28" />
       </Link>
       <Link
         href="/analytics"
         className={router.pathname == "/analytics" ? "active-icon" : "nav-link"}
       >
-        <Icon icon="carbon:analytics-custom" width="33" />
+        <Icon icon="carbon:analytics-custom" width="28" />
       </Link>
       <style jsx global>
         {`

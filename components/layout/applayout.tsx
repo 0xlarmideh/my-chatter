@@ -13,12 +13,12 @@ const Layout = ({ children }: LayoutProps) => {
       <Topbar />
       <Sidebar />
       <Box
-      padding="20px 40px"
+      padding="20px 80px"
       width="100%"
       mb="40px"
       position="relative"
       top="80px"
-      left="100px"
+      left="40px"
       zIndex="1"
     >{children}</Box >
 

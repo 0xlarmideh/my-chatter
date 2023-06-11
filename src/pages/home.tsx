@@ -1,9 +1,12 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Grid, Heading } from '@chakra-ui/react'
 import React from 'react'
+import PostDetail from '../../components/Posts/myfeed/postDetail';
 
-const Home = (): React.JSX.Element=> {
+const Home = ()=> {
   return (
-    <><Heading>Home</Heading></>
+    <Grid templateColumns="repeat(2, 1fr)" gap={8}>
+      <PostDetail />
+    </Grid>
   );
 };
 
