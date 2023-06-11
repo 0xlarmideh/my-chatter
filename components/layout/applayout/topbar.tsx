@@ -24,12 +24,7 @@ const Topbar = () => {
     >
       <Flex w="full" alignItems="center">
         <Link href="/home">
-          <Text
-            fontSize="36"
-            color="purple.400"
-            fontWeight="medium"
-            variant="h3"
-          >
+          <Text fontSize="36" color="#543EE0" fontWeight="medium" variant="h3">
             Chatter
           </Text>
         </Link>

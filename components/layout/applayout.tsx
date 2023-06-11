@@ -17,8 +17,8 @@ const Layout = ({ children }: LayoutProps) => {
       width="100%"
       mb="40px"
       position="relative"
-      top="100px"
-      left="120px"
+      top="80px"
+      left="100px"
       zIndex="1"
     >{children}</Box >
 
