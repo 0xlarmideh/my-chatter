@@ -28,7 +28,7 @@ const Topbar = () => {
         <Link
           href="/home"
         >
-          <Text fontSize="36" color="#543EE0" fontWeight="medium" variant="h3">
+          <Text fontSize="30" color="#543EE0" fontWeight="medium" variant="h3">
             Chatter
           </Text>
         </Link>

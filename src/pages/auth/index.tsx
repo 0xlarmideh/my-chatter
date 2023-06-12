@@ -1,7 +1,6 @@
 import {
   Container,
 } from "@chakra-ui/react";
-import { useForm, SubmitHandler } from "react-hook-form";
 import AuthForm from "../../../components/auth/auth-form";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import AccountForm from "../../../components/auth/account";

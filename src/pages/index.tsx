@@ -1,9 +1,9 @@
 import React from 'react'
 import { ReactElement } from "react";
+import { landingLayout } from '@/types/type'
 
 import HeaderSection from "../../components/landing/HeaderSection"
 import AboutSection from "../../components/landing/AboutSection"
-import { landingLayout } from '@/types/type'
 import Layout from '../../components/layout/default'
 const Index:landingLayout = () => {
   return (
