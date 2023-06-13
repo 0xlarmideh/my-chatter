@@ -19,6 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
           padding="20px 30px 20px 90px"
           width="100%"
           mb="40px"
+          mt="40px"
           position="relative"
           top="40px"
           // left="40px"

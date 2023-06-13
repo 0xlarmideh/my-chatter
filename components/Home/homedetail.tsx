@@ -13,6 +13,7 @@ import { Icon } from "@iconify/react";
 import { ReactNode } from "react";
 import PostImage from "/public/assets/postimage.jpg";
 import Link from "next/link";
+import AvatarComp from "./AvatarComp";
 
 const HomeDetail = (): ReactNode => {
   const postData = [
@@ -104,28 +105,12 @@ const HomeDetail = (): ReactNode => {
         }) => {
           return (
             <Link href="">
-              <Flex
-                mt="30px"
-                gap={4}
-                alignItems="center"
-                key={id}
-              >
-                <Box display="flex"  flexDirection="column" gap="5px">
+              <Flex mt="30px" gap={4} alignItems="center" key={id}>
+                <Box display="flex" flexDirection="column" gap="5px">
                   <Box>
                     <Flex alignItems="center" gap={2}>
-                      <Box
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                        h="30px"
-                        w="30px"
-                        fontSize="24px"
-                        borderRadius="100%"
-                        p="0px"
-                        bg="cyan.100"
-                      >
-                        <Text>{author[0]} </Text>
-                      </Box>
+                      <AvatarComp children={author[0]} />
+                      
                       <Flex fontWeight={400} gap={2} fontSize="14px">
                         <Text>{author} </Text>
                         <Text color="grey">|| </Text>
