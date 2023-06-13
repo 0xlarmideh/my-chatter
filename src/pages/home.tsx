@@ -1,11 +1,12 @@
-import { Heading } from '@chakra-ui/react'
+import { Box, Grid, Heading } from '@chakra-ui/react'
 import React from 'react'
+import HomeDetail from '../../components/Home/homedetail';
 
-const Home = (): React.JSX.Element=> {
+const Home = ()=> {
   return (
-    <div>
-      <Heading>Home</Heading>
-    </div>
+    <Box>
+      <HomeDetail/>
+    </Box>
   );
 };
 
